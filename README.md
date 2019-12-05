@@ -1,1 +1,1 @@
-# snowyweatheriscold.github.io
+this is clint magnum's site

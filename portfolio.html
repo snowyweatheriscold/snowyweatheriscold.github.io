@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daniel Snow</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+</head>
+
+<style>
+  body {
+    background-color: black;
+    color: white;
+    font-family:'Poppins', sans-serif;
+    margin: auto;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    letter-spacing: 0px;
+    cursor: pointer;
+    font-size: 9px;
+    overflow: hidden;
+    letter-spacing: 1px;
+  }
+
+  #topDiv {
+    flex: 100%;
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+  #bottomtextDiv {
+    flex: 100%;
+    width: 100%;
+    margin: 170px 0px 0px 0px;
+    display: block;
+    padding: 2px;
+  }
+  #bottomDiv {
+    flex: 100%;
+    width: 100%;
+    display: block;
+    padding: 1px;
+  }
+
+  #projectList {
+    flex: 0 28%;
+    width: 100%;
+    flex-basis: 1;
+    margin: 190px 0px 100px 0px;
+    letter-spacing: 0.2px;
+  }
+
+  .projectShow {
+    display: none;
+    position: absolute;
+  }
+
+  #projectView {
+    flex: 0 70%;
+    width: 100%;
+    flex-basis: 1;
+    margin: 100px 0px 100px 10px;
+    
+  }
+  .projectShow:hover {
+   width: 70%;
+  }
+
+  .projectItem {
+    /* color: red; */
+  }
+
+  .projectItem:hover {
+    color: gray;
+  }
+
+  #halienteShow {
+    width: 60%;
+  }
+  #halienteShow:hover {
+    width: 70%;
+  }
+  #ukcShow {
+    width: 60%;
+  }
+  #hantscountyShow {
+    width: 60%;
+  }
+  #acaaShow {
+    width: 60%;
+  }
+  #halifaxtheatreShow {
+    width: 60%;
+  }
+  #ggdenimShow {
+    width: 55%;
+  }
+  #topserveShow {
+    width: 60%;
+  }
+</style>
+
+<body>
+  <div id="topDiv">
+    <div id="name">DANIEL SNOW</div>
+    <div id="location">HALIFAX NS</div>
+  </div>
+
+  <div id="projectList">
+    <div id="portfolio" onclick=changePage(this.id) class='projectItem'>PORTFOLIO</div> <br>
+    <div id="portfolio" onclick=changePage(this.id) class='projectItem'> </div>
+    <div id="haliente" onclick=changePage(this.id) class='projectItem'>Haliente</div>
+    <div id="acaa" onclick=changePage(this.id) class='projectItem'>ACAA</div>
+    <div id="topserve" onclick=changePage(this.id) class='projectItem'>Top Serve</div>
+    <div id="hantscounty" onclick=changePage(this.id) class='projectItem'>Hants County</div>
+    <div id="ukc" onclick=changePage(this.id) class='projectItem'>Ukc Blue Devils</div>
+    <div id="halifaxtheatre" onclick=changePage(this.id) class='projectItem'>Halifax Theatre For Young People</div>
+    <div id="ggdenim" onclick=changePage(this.id) class='projectItem'>GG Denim</div>
+  </div>
+
+  <div id="projectView">
+    <img id="halienteShow" class='projectShow' src="img/haliente.jpg">
+    <img id="ukcShow" class='projectShow' src="img/ukc.jpg">
+    <img id="hantscountyShow" class='projectShow' src="img/hantscounty.jpg">
+    <img id="acaaShow" class='projectShow' src="img/acaa.jpg">
+    <img id="topserveShow" class='projectShow' src="img/topserve.jpg">
+    <img id="halifaxtheatreShow" class='projectShow' src="img/halifaxtheatre.jpg">
+    <img id="ggdenimShow" class='projectShow' src="img/ggdenim.jpg">
+    <!-- <img id="halifaxTheaterShow" class='projectShow' src="img/halifaxTheater.jpg"> -->
+  </div>
+  <div id="bottomtextDiv">
+    <div id="name">CONTACT</div>
+    <div id="location">Email</div>
+    <div id="location">Instagram</div>
+
+  </div>
+  <div id="bottomDiv">
+  </div>
+</body>
+
+<script>
+
+  function changePage(id) {
+
+    hideOtherImg();
+
+    if (document.getElementById(id + "Show")) {
+      document.getElementById(id + "Show").style.display = "flex";
+    }
+    // we make an image element
+
+    // var imgDiv = document.createElement("img");
+
+    // // make sure an id was sent
+    // if (id) {
+
+    //   // since the image names are the same as the ids,
+    //   // we grab them from the image folder
+    //   // the src of the image is the filename
+    //   imgDiv.src = "img/" + id + ".jpg";
+
+    //   // grah the projectShow div and add this image to it
+    //   document.getElementById('projectShow').appendChild(imgDiv); 
+    // }
+
+  }
+
+  function hideOtherImg() {
+    var imgs = document.getElementsByClassName("projectShow");
+    
+    for (let i = 0; i < imgs.length; i++) {
+      imgs[i].style.display = "none";
+    }
+  }
+
+</script>
+
+</html>
